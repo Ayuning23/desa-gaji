@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMKM — Desa Gaji</title>
+<meta name="description" content="Produk dan usaha UMKM warga Desa Gaji.">
+<link rel="icon" href="assets/logo.jpg" type="image/jpg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.jpg" alt="Lambang Desa Gaji" class="brand-mark">
+      <span class="brand-text">
+        <strong>Desa Gaji</strong>
+        <span>Situs Resmi Pemerintah Desa</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false"><span></span></button>
+    <nav class="signpost-nav">
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil Desa</a>
+      <a href="umkm.html">UMKM</a>
+      <a href="posyandu.html">Posyandu</a>
+      <a href="lokasi.html">Lokasi</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding:48px 0 40px;">
+    <div class="container">
+      <span class="eyebrow">UMKM warga</span>
+      <h1 style="max-width:20ch;">Produk unggulan buatan tangan warga Desa Gaji</h1>
+      <p class="hero-lede">Dari dapur rumahan hingga kerajinan tangan — kenali dan dukung usaha mikro yang tumbuh di desa kita.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="plank-label">Katalog</span>
+        <h2>Direktori UMKM</h2>
+        <p>Gunakan filter kategori untuk menemukan produk yang Anda cari.</p>
+      </div>
+
+      <div class="umkm-filter" style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:28px;">
+        <button class="btn btn-outline active" data-filter="semua">Semua</button>
+        <button class="btn btn-outline" data-filter="pangan">Pangan</button>
+        <button class="btn btn-outline" data-filter="kerajinan">Kerajinan</button>
+        <button class="btn btn-outline" data-filter="jasa">Jasa</button>
+      </div>
+
+      <div class="grid grid-3">
+
+        <div class="card umkm-card" data-category="pangan">
+          <div class="thumb" style="background:linear-gradient(135deg,#D89B34,#B5432F);">Keripik Singkong Bu Sari</div>
+          <span class="badge">Pangan</span>
+          <h3>Keripik Singkong Bu Sari</h3>
+          <p>Camilan renyah dengan varian rasa original, pedas, dan balado. Diproduksi rumahan setiap hari.</p>
+          <div class="price">Rp 12.000 / bungkus</div>
+        </div>
+
+        <div class="card umkm-card" data-category="kerajinan">
+          <div class="thumb" style="background:linear-gradient(135deg,#4A6B3E,#2F4A2E);">Anyaman Bambu Pak Dirman</div>
+          <span class="badge">Kerajinan</span>
+          <h3>Anyaman Bambu Pak Dirman</h3>
+          <p>Kerajinan tampah, keranjang, dan tikar bambu dengan motif tradisional khas dusun.</p>
+          <div class="price">Mulai Rp 35.000</div>
+        </div>
+
+        <div class="card umkm-card" data-category="pangan">
+          <div class="thumb" style="background:linear-gradient(135deg,#8FA876,#4A6B3E);">Tempe Kedelai Mbah Warno</div>
+          <span class="badge">Pangan</span>
+          <h3>Tempe Kedelai Mbah Warno</h3>
+          <p>Tempe segar berkualitas, diproduksi dengan resep turun-temurun sejak tiga generasi.</p>
+          <div class="price">Rp 5.000 / bungkus</div>
+        </div>
+
+        <div class="card umkm-card" data-category="jasa">
+          <div class="thumb" style="background:linear-gradient(135deg,#B5432F,#241F18);">Jahit &amp; Permak Bu Ratna</div>
+          <span class="badge">Jasa</span>
+          <h3>Jahit &amp; Permak Bu Ratna</h3>
+          <p>Layanan jahit pakaian, permak, dan pembuatan seragam untuk warga sekitar.</p>
+          <div class="price">Mulai Rp 20.000</div>
+        </div>
+
+        <div class="card umkm-card" data-category="kerajinan">
+          <div class="thumb" style="background:linear-gradient(135deg,#D89B34,#4A6B3E);">Batik Tulis Sanggar Gaji</div>
+          <span class="badge">Kerajinan</span>
+          <h3>Batik Tulis Sanggar Gaji</h3>
+          <p>Kain batik tulis motif khas desa, dikerjakan oleh kelompok ibu-ibu PKK.</p>
+          <div class="price">Mulai Rp 150.000</div>
+        </div>
+
+        <div class="card umkm-card" data-category="pangan">
+          <div class="thumb" style="background:linear-gradient(135deg,#2F4A2E,#8FA876);">Madu Hutan Pak Slamet</div>
+          <span class="badge">Pangan</span>
+          <h3>Madu Hutan Pak Slamet</h3>
+          <p>Madu murni hasil budidaya lebah lokal, dipanen langsung dari kebun warga.</p>
+          <div class="price">Rp 45.000 / botol</div>
+        </div>
+
+        <div class="card umkm-card" data-category="jasa">
+          <div class="thumb" style="background:linear-gradient(135deg,#4A6B3E,#D89B34);">Bengkel Motor Karya Muda</div>
+          <span class="badge">Jasa</span>
+          <h3>Bengkel Motor Karya Muda</h3>
+          <p>Servis dan perbaikan kendaraan roda dua, dikelola pemuda karang taruna desa.</p>
+          <div class="price">Mulai Rp 25.000</div>
+        </div>
+
+        <div class="card umkm-card" data-category="pangan">
+          <div class="thumb" style="background:linear-gradient(135deg,#B5432F,#D89B34);">Jamu Tradisional Bu Tini</div>
+          <span class="badge">Pangan</span>
+          <h3>Jamu Tradisional Bu Tini</h3>
+          <p>Jamu segar racikan sendiri: kunyit asam, beras kencur, dan temulawak.</p>
+          <div class="price">Rp 5.000 / botol</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-strip">
+    <div class="container">
+      <h2>Punya usaha dan ingin terdaftar di direktori ini?</h2>
+      <a href="kontak.html" class="btn">Daftarkan UMKM Anda →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Desa Gaji</h4>
+        <p>Kantor Desa Gaji melayani warga dengan transparan, responsif, dan berbasis gotong royong.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="profil.html">Profil Desa</a></li>
+          <li><a href="umkm.html">UMKM</a></li>
+          <li><a href="posyandu.html">Posyandu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="lokasi.html">Lokasi Kantor</a></li>
+          <li><a href="kontak.html">Kontak &amp; Aduan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Jam Layanan</h4>
+        <p>Senin – Jumat<br>08.00 – 15.00 WIB</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="year-now">2026</span> Pemerintah Desa Gaji</span>
+      <span>Dibuat untuk warga, oleh warga</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

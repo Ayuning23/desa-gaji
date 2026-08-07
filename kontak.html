@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak &amp; Aduan — Desa Gaji</title>
+<meta name="description" content="Hubungi Kantor Pemerintah Desa Gaji atau sampaikan aspirasi dan aduan Anda secara online.">
+<link rel="icon" href="assets/logo.jpg" type="image/jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.jpg" alt="Lambang Desa Gaji" class="brand-mark">
+      <span class="brand-text">
+        <strong>Desa Gaji</strong>
+        <span>Situs Resmi Pemerintah Desa</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false"><span></span></button>
+    <nav class="signpost-nav">
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil Desa</a>
+      <a href="umkm.html">UMKM</a>
+      <a href="posyandu.html">Posyandu</a>
+      <a href="lokasi.html">Lokasi</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO BANNER -->
+  <section class="hero" style="padding:48px 0 40px;">
+    <div class="container">
+      <span class="eyebrow">Layanan Warga</span>
+      <h1 style="max-width:20ch;">Hubungi Kantor Desa</h1>
+      <p class="hero-lede">Sampaikan pertanyaan, permohonan informasi, aspirasi, atau aduan Anda langsung kepada pemerintah desa.</p>
+    </div>
+  </section>
+
+  <!-- FORMULIR & DETAIL KONTAK -->
+  <section>
+    <div class="container">
+      <div class="grid grid-2">
+        
+        <!-- Kolom Kiri: Formulir -->
+        <div class="card" style="padding: 40px;">
+          <h3 style="margin-bottom: 8px;">Kirim Pesan Online</h3>
+          <p style="color: var(--gray); margin-bottom: 24px;">Silakan lengkapi data di bawah ini untuk mengirim aduan atau pertanyaan.</p>
+          
+          <form action="https://formspree.io/f/xvzeylba" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Field wajib Formspree untuk redirect setelah kirim -->
+            <input type="hidden" name="_subject" value="Pesan Baru dari Website Desa Gaji">
+            <input type="hidden" name="_next" value="https://Ayuning23.github.io/desa-gaji/kontak.html?terkirim=1">
+
+            <div>
+              <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.95rem;">Nama Lengkap</label>
+              <input type="text" name="nama" placeholder="Masukkan nama Anda" required 
+                style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+            </div>
+            
+            <div>
+              <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.95rem;">Nomor WhatsApp / HP</label>
+              <input type="tel" name="nomor_wa" placeholder="Contoh: 081234567xxx" required 
+                style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 1rem;">
+            </div>
+
+            <div>
+              <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.95rem;">Jenis Keperluan</label>
+              <select name="jenis_keperluan" style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 1rem; background-color: white;">
+                <option value="pertanyaan">Pertanyaan Umum</option>
+                <option value="aduan">Pengaduan / Laporan Fasilitas</option>
+                <option value="layanan">Informasi Layanan Surat</option>
+                <option value="aspirasi">Aspirasi / Usulan Pembangunan</option>
+              </select>
+            </div>
+            
+            <div>
+              <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.95rem;">Isi Pesan atau Aduan</label>
+              <textarea name="pesan" rows="5" placeholder="Tuliskan pesan Anda secara jelas dan detail..." required 
+                style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 8px; border: none;">Kirim Pesan →</button>
+          </form>
+
+          <!-- Pesan sukses setelah form terkirim -->
+          <div id="pesan-sukses" style="display:none; margin-top: 20px; padding: 16px; background: #e8f5e9; border-left: 4px solid #2e7d32; border-radius: 8px;">
+            <strong style="color: #2e7d32;">✅ Pesan berhasil dikirim!</strong>
+            <p style="margin: 4px 0 0; color: #444; font-size: 0.9rem;">Terima kasih telah menghubungi kami. Perangkat desa akan segera merespons pesan Anda.</p>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Info Kontak Resmi -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          
+          <div class="card" style="display: flex; gap: 20px; align-items: flex-start;">
+            <div style="font-size: 2rem; background: var(--light); padding: 12px; border-radius: 12px; line-height: 1;">📞</div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Telepon &amp; WhatsApp</h4>
+              <p style="color: var(--gray); margin-bottom: 8px;">Hubungi nomor pelayanan warga di hari kerja.</p>
+              <a href="https://wa.me/6281234567890" target="_blank" style="color: var(--primary); font-weight: 700; display: block; font-size: 1.1rem;">+62 812-3456-7890</a>
+            </div>
+          </div>
+
+          <div class="card" style="display: flex; gap: 20px; align-items: flex-start;">
+            <div style="font-size: 2rem; background: var(--light); padding: 12px; border-radius: 12px; line-height: 1;">✉️</div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Surat Elektronik (Email)</h4>
+              <p style="color: var(--gray); margin-bottom: 8px;">Kirim berkas kerja sama atau surat resmi kedinasan.</p>
+              <a href="mailto:pemdes@desagaji.id" style="color: var(--primary); font-weight: 700; display: block; font-size: 1.1rem;">pemdes@desagaji.id</a>
+            </div>
+          </div>
+
+          <div class="card" style="display: flex; gap: 20px; align-items: flex-start;">
+            <div style="font-size: 2rem; background: var(--light); padding: 12px; border-radius: 12px; line-height: 1;">🏛️</div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Alamat Kantor Desa</h4>
+              <p style="color: var(--gray); line-height: 1.5;">
+                Balai Desa Gaji<br>
+                Jl. Raya Desa Gaji No. 1, Kecamatan —, Kabupaten —<br>
+                Kode Pos —
+              </p>
+              <a href="lokasi.html" style="color: var(--terracotta); font-weight: 600; display: inline-block; margin-top: 12px; font-size: 0.9rem;">Lihat Peta Petunjuk Arah →</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Desa Gaji</h4>
+        <p>Kantor Desa Gaji melayani warga dengan transparan, responsif, dan berbasis gotong royong.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="profil.html">Profil Desa</a></li>
+          <li><a href="umkm.html">UMKM</a></li>
+          <li><a href="posyandu.html">Posyandu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="lokasi.html">Lokasi Kantor</a></li>
+          <li><a href="kontak.html">Kontak &amp; Aduan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Jam Layanan</h4>
+        <p>Senin – Jumat<br>08.00 – 15.00 WIB</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="year-now">2026</span> Pemerintah Desa Gaji</span>
+      <span>Dibuat untuk warga, oleh warga</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Tampilkan pesan sukses jika URL mengandung ?terkirim=1 -->
+<script>
+  if (window.location.search.includes('terkirim=1')) {
+    document.getElementById('pesan-sukses').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('pesan-sukses').offsetTop - 100, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
